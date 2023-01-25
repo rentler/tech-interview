@@ -1,17 +1,17 @@
 # tech-interview
 A base solution intended as a starting point for our technical interviews
 
-# Building the docker image
+1. Build the WebApi docker image
 ```
 docker build -f WeatherForecast.Web\Dockerfile -t weatherforecast-web .
 ```
 
-# Create the database
+2. Create and initialzie the database
 ```
 dotnet ef database update --project WeatherForecast.Web
 ```
 
-# Building the docker container
+3 Startup the docker container
 ```
 docker-compose -p interview up -d
 ```
