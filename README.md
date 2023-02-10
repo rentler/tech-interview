@@ -9,8 +9,7 @@ docker build -f WeatherForecast.Web\Dockerfile -t weatherforecast-web .
 ```
 
 2. Startup docker container
-
-Includes a MSSQL image and a Weather Forecast API .NET 6 image
+> Includes a MSSQL image and a Weather Forecast API .NET 6 image
 ```
 docker-compose -p interview up -d
 ```
@@ -28,8 +27,7 @@ docker-compose -p interview stop weatherforecast-web
 - Delete WeatherForecast by Id
 
 5. Create database and run Migrations
-
-Run the following command from the Package Manager Console in Visual Studio
+> Run the following command from the Package Manager Console in Visual Studio
 ```
 dotnet ef database update --project WeatherForecast.Web
 ```
@@ -44,7 +42,7 @@ docker-compose -p interview start weatherforecast-web
 8. Launch the WeatherForecast API by going to http://localhost:6001
 
 
-# Tearing down docker container
+## Tearing down docker container
 ```
 docker-compose -p interview down -v
 ```
