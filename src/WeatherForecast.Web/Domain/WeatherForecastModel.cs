@@ -1,7 +1,9 @@
-namespace WeatherForecast.Web;
+namespace WeatherForecast.Web.Domain;
 
-public class WeatherForecast
+public class WeatherForecastModel
 {
+    public long WeatherForecastId { get; set; }
+
     public DateTime Date { get; set; }
 
     public int TemperatureC { get; set; }
