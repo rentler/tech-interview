@@ -5,7 +5,6 @@ services:
       - 6001:80
     environment:
       - Console__Enabled=true
-      - ASPNETCORE_ENVIRONMENT=Development
   mssql:
     ports:
       - 1433:1433
