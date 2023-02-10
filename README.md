@@ -19,12 +19,7 @@ docker-compose -p interview up -d
 docker-compose -p interview stop weatherforecast-web
 ```
 
-4. Open solution and implement CRUD operations for the WeatherForecast API
-
-- Create WeatherForecast
-- Read WeatherForecast by Id
-- Update WeatherForecast by Id
-- Delete WeatherForecast by Id
+4. Open solution file in Visual Studio
 
 5. Create database and run Migrations
 > Run the following command from the Package Manager Console in Visual Studio
@@ -32,14 +27,20 @@ docker-compose -p interview stop weatherforecast-web
 dotnet ef database update --project WeatherForecast.Web
 ```
 
-6. Re-run Step 1 again to rebuild the WeatherForecast API docker image after changes
+6. Implement CRUD operations for WeatherForecast API
+- Create WeatherForecast
+- Read WeatherForecast by Id
+- Update WeatherForecast by Id
+- Delete WeatherForecast by Id
 
-7. Run the following command to start the updated WeatherForecast API docker image
+7. Re-run Step 1 again to rebuild the WeatherForecast API docker image after changes
+
+8. Run the following command to start the updated WeatherForecast API docker image
 ```
 docker-compose -p interview start weatherforecast-web
 ```
 
-8. Launch the WeatherForecast API by going to http://localhost:6001
+9. Launch the WeatherForecast API by going to http://localhost:6001
 
 
 ## Tearing down docker container
