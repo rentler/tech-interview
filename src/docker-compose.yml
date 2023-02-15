@@ -1,12 +1,22 @@
 ﻿version: "2.1"
 
 services:
-  weatherforecast-web:
-    image: weatherforecast-web
-    build:
-      context: .
-      dockerfile: WeatherForecast.Web/Dockerfile
   mssql:
     image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    ports:
+      - 1433:1433
     environment:
       - ACCEPT_EULA=Y
+      - SA_PASSWORD=yourStrong(!)Password
+    restart: always
+    volumes:
+      - sql-weatherforecast:/var/opt/mssql-weatherforecast
+      - './db:/home'
+    healthcheck:
+      test:
+        ['CMD', '/opt/mssql-tools/bin/sqlcmd', '-U', 'sa', '-P', 'yourStrong(!)Password', '-Q', 'select 1']
+      interval: 5s
+      timeout: 5s
+      retries: 12
+volumes:
+  sql-weatherforecast:
