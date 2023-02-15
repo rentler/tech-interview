@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.HttpLogging;
 using Serilog;
 using WeatherForecast.Web.Configuration;
+using WeatherForecast.Web.Sql;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,11 +26,13 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Run migrations
+using (var scope = app.Services.CreateScope())
+    await ServiceSqlContextInitializer.Initialize(scope.ServiceProvider);
 
+// Configure the HTTP request pipeline.
 app.UseSwagger();
 app.UseSwaggerUI();
-
 
 app.UseAuthorization();
 
