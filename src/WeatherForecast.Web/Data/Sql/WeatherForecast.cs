@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WeatherForecast.Web.Sql;
+namespace WeatherForecast.Web.Data.Sql;
 
 public class WeatherForecast
 {

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using WeatherForecast.Web.Domain;
 
 namespace WeatherForecast.Web.Controllers;
 
@@ -14,10 +15,10 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    public IEnumerable<WeatherForecastModel> Get()
     {
         _logger.LogInformation("Hit GetWeatherForecast");
         
-        return new List<WeatherForecast>();
+        return new List<WeatherForecastModel>();
     }
 }

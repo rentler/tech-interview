@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore;
 
-namespace WeatherForecast.Web.Sql;
+namespace WeatherForecast.Web.Data.Sql;
 
 /// <summary>
 /// Used by the dotnet ef command to automatically scaffold

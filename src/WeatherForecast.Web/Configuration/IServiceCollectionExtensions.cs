@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WeatherForecast.Web.Sql;
+using WeatherForecast.Web.Data.Sql;
 
 namespace WeatherForecast.Web.Configuration;
 
