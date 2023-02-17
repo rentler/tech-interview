@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WeatherForecast.Web.Data.Sql;
+
 namespace WeatherForecast.Web.Sql;
 
 /// <summary>

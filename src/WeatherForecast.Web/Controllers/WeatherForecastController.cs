@@ -14,11 +14,10 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecastModel> Get()
+    [HttpGet]
+    [Route("{id}")]
+    public WeatherForecastModel Read(long id)
     {
-        _logger.LogInformation("Hit GetWeatherForecast");
-        
-        return new List<WeatherForecastModel>();
+        throw new NotImplementedException();
     }
 }
